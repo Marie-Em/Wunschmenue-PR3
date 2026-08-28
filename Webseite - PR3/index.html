@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!--  Fehler im Studienbrief? UTF8/> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Premium Mittagsmenüs</title>
+    <meta name="description" content="Exklusive Mittagsmenüs von unseren Köchen als Highlight für das aufkommende Event."/>
+</head>
+
+<body>
+    <header>
+        <h1>Ihr exklusives Wunschmenü zum Event - jetzt vorbestellen</h1>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <p>Für unsere Veranstaltung haben unsere Köche exklusive Menüvarianten für Sie zusammengestellt. 
+                Wählen Sie Ihr Wunschmenü und teilen Sie uns besondere Ernährungswünsche mit.</p>
+        </section>
+        
+        <!-- Koch 1 -->
+        <section class="italian-intro">
+            <h2> <span class="italian-flag"></span>Italienische Küche</h2>
+            <p>Köchin: Lucia Bellarosa</p>
+        </section>
+        <section class="italian-menues">
+            <article class="menu">
+                <h3>Menü 1: Norditalien</h3>
+                <div class="course">
+                    <h4>Vorspeise</h4>
+                    <p>Bruschetta</p> 
+                </div>
+                <div class="course">
+                    <h4>Hauptgang</h4>
+                    <p>Risotto mit Pilzen</p>
+                </div>
+                <div class="course">
+                    <h4>Dessert</h4>
+                    <p>Panna Cotta</p>                  
+                </div>  
+            </article>
+
+            <article class="menu">
+                <h3>Menü 2: Mittelitalien</h3>
+                <div class="course">
+                    <h4>Vorspeise</h4>
+                    <p>Caprese</p> 
+                </div>
+                <div class="course">
+                    <h4>Hauptgang</h4>
+                    <p>Lasagne</p>
+                </div>
+                <div class="course">
+                    <h4>Dessert</h4>
+                    <p>Tiramisu</p>
+                </div>  
+            </article>
+
+            <article class="menu">
+                <h3>Menü 3: Süditalien</h3>
+                <div class="course">
+                    <h4>Vorspeise</h4>
+                    <p>Antipasti</p> 
+                </div>
+                <div class="course">
+                    <h4>Hauptgang</h4>
+                    <p>Pasta alla Norma</p>
+                </div>
+                <div class="course">
+                    <h4>Dessert</h4>
+                    <p>Cannoli</p>
+                </div>  
+            </article>
+        </section>
+
+        <!-- Formular Italienische Küche -->
+        <section class="italian-menue-form">
+            <form action="formular.php" method="post">
+                <div class="form-header">Menüauswahl - Italienische Küche</div></br>
+            <label for="Ivorname">Vorname: </label>
+            <input type="text"
+                    name="vorname"
+                    id="Ivorname"
+                    size="30" 
+                    maxlength="40" 
+                    required></br></br>
+            <label for="Inachname">Nachname: </label>
+            <input type="text" 
+                    name="nachname" 
+                    id="Inachname"
+                    size="30" 
+                    maxlength="40" 
+                    required></br></br>
+            <label>Bitte wählen Sie ein Menü: </br></label>
+            <input type="radio" 
+                    name="IMenueauswahl" 
+                    id="IM1" value="Menü 1"> 
+            <label for="IM1">Menü 1: Normandie</label></br>
+            <input type="radio" 
+                    name="IMenueauswahl" 
+                    id="IM2" value="Menü 2"> 
+            <label for="IM2">Menü 2: Provence</label></br>
+            <input type="radio" 
+                    name="IMenueauswahl" 
+                    id="IM3" value="Menü 3"> 
+            <label for="IM3">Menü 3: Bretagne</label></br>
+            <input type="radio" 
+                    name="IMenueauswahl" 
+                    id="IM0" value="keines"> 
+            <label for="IM0">Keines der Menüs</label></br></br>
+            <label>Ernährungsbesonderheiten / Unverträglichkeiten: </label></br>
+            <input type="checkbox" 
+                    name="IErnaehrungsbesonderheiten[]" 
+                    id="ILaktose" 
+                    value="Laktoseintoleranz">
+            <label for="ILaktose">Laktoseintoleranz</label></br>
+            <input type="checkbox" 
+                    name="IErnaehrungsbesonderheiten[]" 
+                    id="IGluten" 
+                    value="Glutenunvertraeglichkeit">
+            <label for="IGluten">Glutenunverträglichkeit</label></br>
+            <input type="checkbox" 
+                    name="IErnaehrungsbesonderheiten[]" 
+                    id="INuss" 
+                    value="Nussallergie">
+            <label for="INuss">Nussallergie</label></br>
+            <input type="checkbox" 
+                    name="IErnaehrungsbesonderheiten[]" 
+                    id="IFruktose" 
+                    value="Fruktoseintoleranz">
+            <label for="IFruktose">Fruktoseintoleranz</label></br>
+            <input type="checkbox" 
+                    name="IErnaehrungsbesonderheiten[]" 
+                    id="IVegetarisch" 
+                    value="Vegetarisch">
+            <label for="IVegetarisch">Vegetarisch</label></br></br>
+            <label>Andere Unverträglichkeiten / Ernährungsbesonderheiten: </label></br>
+            <textarea 
+                id="Iandere_besonderheiten"
+                name="andere_besonderheiten" 
+                rows="2" 
+                cols="150"
+            ></textarea></br></br>
+            <label>Mitteilung: </label></br>
+            <textarea 
+                id="Imitteilung"
+                name="mitteilung" 
+                rows="5" 
+                cols="150"
+                placeholder="Ihre Mitteilung an uns..."
+            ></textarea></br></br>
+            </br><input type="submit" value="Menüwunsch abschicken" name="IAbschicken">
+            </form>
+        </section>
+        
+        <!-- Koch 2 -->
+        <section class="french-intro">
+            <h2><span class="french-flag"></span>Französische Küche</h2>
+            <p>Koch: Étienne Moreau</p>
+        </section>
+        <section class="french-menues">
+            <article class="menu">
+                <h3>Menü 1: Normandie</h3>
+                <div class="course">
+                    <h4>Vorspeise</h4>
+                    <p>Französische Zwiebelsuppe</p> 
+                </div>
+                <div class="course">
+                    <h4>Hauptgang</h4>
+                    <p>Hähnchen in Cidre-Sauce</p>
+                </div>
+                <div class="course">
+                    <h4>Dessert</h4>
+                    <p>Apfeltarte</p>
+                </div>  
+            </article>
+
+            <article class="menu">
+                <h3>Menü 2: Provence</h3>
+                <div class="course">
+                    <h4>Vorspeise</h4>
+                    <p>Ratatouille</p> 
+                </div>
+                <div class="course">
+                    <h4>Hauptgang</h4>
+                    <p>Coq au Vin</p>
+                </div>
+                <div class="course">
+                    <h4>Dessert</h4>
+                    <p>Crème brûlée</p>
+                </div>  
+            </article>
+            
+            <article class="menu">
+                <h3>Menü 3: Bretagne</h3>
+                <div class="course">
+                    <h4>Vorspeise</h4>
+                    <p>Französischer Salat</p> 
+                </div>
+                <div class="course">
+                    <h4>Hauptgang</h4>
+                    <p>Fisch mit Kräutern und Gemüse</p>
+                </div>
+                <div class="course">
+                    <h4>Dessert</h4>
+                    <p>Crêpes mit Beeren</p>
+                </div>  
+            </article>             
+        </section>
+
+        <!-- Formular Französische Küche -->
+        <section class="french-menue-form">
+            <form action="formular.php" method="post">
+                <div class="form-header">Menüauswahl - Französische Küche</div></br>
+            <label for="Fvorname">Vorname: </label>
+            <input type="text"
+                    id="Fvorname"
+                    name="vorname" 
+                    name="vorname" 
+                    size="30" 
+                    maxlength="40" 
+                    required></br></br>
+            <label for="Fnachname">Nachname: </label>
+            <input type="text" 
+                    id="Fnachname"
+                    name="nachname" 
+                    size="30" 
+                    maxlength="40" 
+                    required></br></br>
+            <label>Bitte wählen Sie ein Menü: </br></label>
+            <input type="radio" 
+                    name="FMenueauswahl" 
+                    id="FM1" value="Menü 1"> 
+            <label for="FM1">Menü 1: Normandie</label></br>
+            <input type="radio" 
+                    name="FMenueauswahl" 
+                    id="FM2" value="Menü 2"> 
+            <label for="FM2">Menü 2: Provence</label></br>
+            <input type="radio" 
+                    name="FMenueauswahl" 
+                    id="FM3" value="Menü 3"> 
+            <label for="FM3">Menü 3: Bretagne</label></br>
+            <input type="radio" 
+                    name="FMenueauswahl" 
+                    id="FM0" value="keines"> 
+            <label for="FM0">Keines der Menüs</label></br></br>
+            <label>Ernährungsbesonderheiten / Unverträglichkeiten: </label></br>
+            <input type="checkbox" 
+                    name="FErnaehrungsbesonderheiten[]" 
+                    id="FLaktose" 
+                    value="Laktoseintoleranz">
+            <label for="FLaktose">Laktoseintoleranz</label></br>
+            <input type="checkbox" 
+                    name="FErnaehrungsbesonderheiten[]" 
+                    id="FGluten" 
+                    value="Glutenunvertraeglichkeit">
+            <label for="FGluten">Glutenunverträglichkeit</label></br>
+            <input type="checkbox" 
+                    name="FErnaehrungsbesonderheiten[]" 
+                    id="FNuss" 
+                    value="Nussallergie">
+            <label for="FNuss">Nussallergie</label></br>
+            <input type="checkbox" 
+                    name="FErnaehrungsbesonderheiten[]" 
+                    id="FFruktose" 
+                    value="Fruktoseintoleranz">
+            <label for="FFruktose">Fruktoseintoleranz</label></br>
+            <input type="checkbox" 
+                    name="FErnaehrungsbesonderheiten[]" 
+                    id="FVegetarisch" 
+                    value="Vegetarisch">
+            <label for="FVegetarisch">Vegetarisch</label></br></br>
+            <label>Andere Unverträglichkeiten / Ernährungsbesonderheiten: </label></br>
+            <textarea
+                id="Fandere_besonderheiten"
+                name="andere_besonderheiten" 
+                rows="2" 
+                cols="150"
+            ></textarea></br></br>
+            <label>Mitteilung: </label></br>
+            <textarea 
+                id="Fmitteilung"
+                name="mitteilung" 
+                rows="5" 
+                cols="150"
+                placeholder="Ihre Mitteilung an uns..."
+            ></textarea></br></br>
+            </br><input type="submit" value="Menüwunsch abschicken" name="FAbschicken">
+            </form>
+        </section>
+     </main>
+
+<footer></footer>    
+</body>
+
+</html>
